@@ -1,4 +1,4 @@
-?{% extends 'rango/base.html' %}
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
 	About
@@ -9,11 +9,14 @@
 <h1>Rango says here is the about page.</h1>
 <div>
 <strong>This tutorial has been put together by Anith Manu Ravindran.</strong><br/>
+<p>visits: {{visits}}</p>
 
 </div>
 <div>
-<a href = "/rango/">Index</a><br/>
-<img src = "{{ MEDIA_URL }}cat.jpg" alt = "Picture of a cat" />
+<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+		<p>
+		<img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a cat">
+		<p>
 </div>
 
 {% endblock %}
